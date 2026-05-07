@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anshu Vashishta | Online Counselling</title>
+
+<style>
+body {
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background:#f7f9fb;
+  color:#333;
+}
+
+/* HERO */
+header {
+  background: linear-gradient(rgba(108,99,255,0.85), rgba(108,99,255,0.85)),
+              url('https://images.unsplash.com/photo-1506126613408-eca07ce68773');
+  background-size: cover;
+  background-position: center;
+  color:white;
+  text-align:center;
+  padding:100px 20px;
+}
+header h1 {font-size:2.5em; margin:0;}
+header p {font-size:1.2em; margin-top:10px;}
+
+.cta-btn {
+  margin-top:20px;
+  display:inline-block;
+  padding:14px 28px;
+  background:#fff;
+  color:#6c63ff;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* NAV */
+nav {
+  background:white;
+  padding:10px;
+  text-align:center;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+nav a {
+  margin:0 15px;
+  text-decoration:none;
+  color:#333;
+  font-weight:bold;
+}
+
+/* SECTIONS */
+section {
+  max-width:900px;
+  margin:40px auto;
+  padding:40px;
+  background:white;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.05);
+}
+
+h2 {color:#6c63ff;}
+
+/* CONTACT BUTTONS */
+.contact-buttons {
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
+.contact-buttons a {
+  flex:1;
+  text-align:center;
+  padding:12px;
+  border-radius:30px;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+}
+.email {background:#6c63ff;}
+.call {background:#4CAF50;}
+.whatsapp {background:#25D366;}
+
+/* FLOAT BUTTON */
+.floating {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+}
+.floating a {
+  display:block;
+  margin-top:10px;
+  padding:12px 18px;
+  border-radius:30px;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+.f-email {background:#6c63ff;}
+.f-call {background:#4CAF50;}
+.f-wa {background:#25D366;}
+
+footer {
+  text-align:center;
+  padding:20px;
+  color:#777;
+}
+
+@media(max-width:600px){
+  header h1 {font-size:2em;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Online Counselling with Anshu Vashishta</h1>
+  <p>Supporting Anxiety, Trauma & Emotional Wellbeing</p>
+  <p style="margin-top:15px;">Taking the first step can feel difficult — you don’t have to do it alone.</p>
+  <a href="mailto:youremail@example.com" class="cta-btn">Start Your Free Consultation</a>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#specialties">Specialties</a>
+  <a href="#sessions">Sessions</a>
+  <a href="#testimonials">Testimonials</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>Hello, I’m <strong>Anshu Vashishta</strong>, a qualified integrative counsellor with over 3 years of experience. I offer online counselling for young people (16+) and adults.</p>
+
+  <p>I provide a calm, supportive, and non-judgemental space where you can explore your thoughts and feelings at your own pace. My approach is flexible and tailored to your individual needs, helping you feel heard, understood, and supported.</p>
+
+  <!-- BACP Logo -->
+  <div style="margin-top:20px;">
+    <img src="bacp-logo.png" alt="BACP Registered Member" style="width:120px;">
+    <p style="font-size:0.9em;">Registered BACP Member</p>
+  </div>
+</section>
+
+<section id="specialties">
+  <h2>How I Can Support You</h2>
+  <ul>
+    <li>Anxiety and overthinking</li>
+    <li>Trauma and past experiences</li>
+    <li>Mindfulness and emotional regulation</li>
+    <li>Stress and burnout</li>
+    <li>Low self-esteem</li>
+    <li>Life challenges and transitions</li>
+  </ul>
+</section>
+
+<section id="sessions">
+  <h2>Online Counselling & Fees</h2>
+  <p>Sessions are held online via secure video call.</p>
+  <p><strong>£50 per 50-minute session</strong></p>
+  <p>Free 20-minute consultation available.</p>
+</section>
+
+<section id="testimonials">
+  <h2>Client Feedback</h2>
+
+  <p style="font-style:italic;">
+    "Anshu created a safe and calming space where I felt truly heard. Her patience helped me manage my anxiety."
+  </p>
+
+  <p style="font-style:italic;">
+    "I felt comfortable opening up at my own pace. The sessions helped me understand my emotions better."
+  </p>
+
+  <p style="font-size:0.85em; color:#777;">
+    *Testimonials are anonymised.
+  </p>
+</section>
+
+
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Get in touch to start your journey.</p>
+
+  <div class="contact-buttons">
+    <a href="mailto:avcounsellingspace@gmail.com" class="email">Email</a>
+    <a href="tel:07435252267" class="call">Call</a>
+    <a href="https://wa.me/447435252267" target="_blank" class="whatsapp">WhatsApp</a>
+  </div>
+
+  <p style="margin-top:15px;">Phone: 07435 252267</p>
+</section>
+
+<!-- Floating Buttons -->
+<div class="floating">
+  <a href="mailto:avcounsellingspace@gmail.com" class="f-email">Email</a>
+  <a href="tel:07435252267" class="f-call">Call</a>
+  <a href="https://wa.me/447435252267" target="_blank" class="f-wa">WhatsApp</a>
+</div>
+
+<footer>
+  © 2026 Anshu Vashishta | Online Counselling
+</footer>
+
+</body>
+</html>
