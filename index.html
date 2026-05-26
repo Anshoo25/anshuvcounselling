@@ -1,152 +1,578 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en-GB">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anshu Vashishta | Online Counselling</title>
+
+<title>Anshu Vashishta Counselling and Psychotherapy</title>
+
+<meta name="description"
+content="Compassionate online counselling and psychotherapy support for anxiety, trauma, stress, emotional wellbeing, and personal growth.">
+
+<meta name="keywords"
+content="online counselling, psychotherapy, anxiety counselling, trauma support, emotional wellbeing, counsellor UK, online therapy">
+
+<meta name="author" content="Anshu Vashishta">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#6c63ff">
+
+<link rel="canonical" href="https://anshoo25.github.io/anshuvcounselling/">
+<link rel="icon" href="favicon.png">
+
+<!-- Open Graph -->
+
+<meta property="og:title" content="Anshu Vashishta Counselling and Psychotherapy">
+<meta property="og:description" content="Compassionate online support for anxiety, trauma, stress, and emotional wellbeing.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="me.jpg">
+<meta property="og:url" content="https://anshoo25.github.io/anshuvcounselling/">
+
+<!-- Twitter -->
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Anshu Vashishta Counselling and Psychotherapy">
+<meta name="twitter:description" content="Online counselling and psychotherapy support for anxiety, trauma, emotional wellbeing, and personal growth.">
+<meta name="twitter:image" content="me.jpg">
 
 <style>
-body {
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
   margin:0;
-  font-family: 'Segoe UI', sans-serif;
-  background:#f7f9fb;
+  font-family:'Segoe UI',sans-serif;
+  background:linear-gradient(to bottom,#f7f9fb,#eef2f7);
   color:#333;
+  line-height:1.7;
+  font-size:16px;
 }
 
 /* HERO */
-header {
-  background: linear-gradient(rgba(108,99,255,0.85), rgba(108,99,255,0.85)),
-              url('https://images.unsplash.com/photo-1506126613408-eca07ce68773');
-  background-size: cover;
-  background-position: center;
+
+header{
+  background:
+    linear-gradient(rgba(108,99,255,0.82),rgba(108,99,255,0.82)),
+    url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop');
+  background-size:cover;
+  background-position:center;
   color:white;
   text-align:center;
-  padding:100px 20px;
+  padding:40px 20px;
 }
-header h1 {font-size:2.5em; margin:0;}
-header p {font-size:1.2em; margin-top:10px;}
 
-.cta-btn {
-  margin-top:20px;
+header h1{
+  font-size:2.6rem;
+  margin:20px 0 10px;
+  line-height:1.2;
+}
+
+header p{
+  max-width:700px;
+  margin:14px auto;
+  font-size:1.08rem;
+}
+
+.cta-btn{
   display:inline-block;
-  padding:14px 28px;
-  background:#fff;
+  margin-top:20px;
+  padding:13px 26px;
+  background:white;
   color:#6c63ff;
   border-radius:30px;
   text-decoration:none;
+  font-weight:600;
+  transition:0.3s ease;
+}
+
+.cta-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* SIDEBAR */
+
+.menu-toggle{
+  position:fixed;
+  top:15px;
+  left:15px;
+  background:#6c63ff;
+  color:white;
+  border:none;
+  padding:10px 14px;
+  border-radius:12px;
+  font-size:18px;
+  cursor:pointer;
+  z-index:3000;
+}
+
+.overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.35);
+  opacity:0;
+  visibility:hidden;
+  transition:0.3s ease;
+  z-index:2000;
+}
+
+.overlay.active{
+  opacity:1;
+  visibility:visible;
+}
+
+.sidebar{
+  position:fixed;
+  top:0;
+  left:-300px;
+  width:280px;
+  height:100%;
+  background:linear-gradient(180deg,#ffffff,#f7f7ff);
+  box-shadow:4px 0 20px rgba(0,0,0,0.15);
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  transition:0.35s ease;
+  z-index:2500;
+}
+
+.sidebar.open{
+  left:0;
+}
+
+.sidebar-header{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding-bottom:20px;
+  border-bottom:1px solid #eee;
+  margin-bottom:20px;
+}
+
+.avatar{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:#6c63ff;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   font-weight:bold;
 }
 
-/* NAV */
-nav {
-  background:white;
-  padding:10px;
-  text-align:center;
-  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+.sidebar-links{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
 }
-nav a {
-  margin:0 15px;
+
+.sidebar-links a{
+  padding:12px;
+  border-radius:10px;
   text-decoration:none;
   color:#333;
-  font-weight:bold;
+  font-weight:600;
+  transition:0.2s ease;
+}
+
+.sidebar-links a:hover{
+  background:#f0f0ff;
+  color:#6c63ff;
+  transform:translateX(4px);
+}
+
+.sidebar-footer{
+  margin-top:auto;
+  font-size:12px;
+  color:#888;
+  text-align:center;
+  padding-top:15px;
+  border-top:1px solid #eee;
 }
 
 /* SECTIONS */
-section {
-  max-width:900px;
+
+section{
+  width:min(92%,1000px);
   margin:40px auto;
   padding:40px;
   background:white;
-  border-radius:12px;
+  border-radius:22px;
   box-shadow:0 4px 12px rgba(0,0,0,0.05);
 }
 
-h2 {color:#6c63ff;}
+h2{
+  color:#6c63ff;
+  margin-top:0;
+  margin-bottom:18px;
+}
 
-/* CONTACT BUTTONS */
-.contact-buttons {
+/* ABOUT */
+
+.intro-profile{
   display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-top:20px;
+  align-items:center;
+  gap:40px;
 }
-.contact-buttons a {
-  flex:1;
-  text-align:center;
-  padding:12px;
-  border-radius:30px;
-  color:white;
-  text-decoration:none;
-  font-weight:bold;
-}
-.email {background:#6c63ff;}
-.call {background:#4CAF50;}
-.whatsapp {background:#25D366;}
 
-/* FLOAT BUTTON */
-.floating {
+.profile-image img{
+  width:320px;
+  border-radius:20px;
+  object-fit:cover;
+  box-shadow:0 8px 24px rgba(0,0,0,0.12);
+}
+
+.profile-text{
+  flex:1;
+}
+
+/* BADGES */
+
+.profile-badges{
+  margin-top:25px;
+  display:flex;
+  gap:30px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.profile-badges img{
+  transition:0.3s ease;
+}
+
+.profile-badges img:hover{
+  transform:translateY(-3px);
+  opacity:0.96;
+}
+
+/* LISTS */
+
+ul{
+  padding-left:20px;
+}
+
+li{
+  margin-bottom:10px;
+}
+
+/* CONTACT */
+
+#contact{
+  max-width:800px;
+}
+
+#contact p{
+  color:#555;
+}
+
+#contact form{
+  margin-top:22px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+#contact label{
+  font-weight:600;
+  font-size:15px;
+  color:#444;
+}
+
+#contact input,
+#contact textarea{
+  width:100%;
+  padding:13px 14px;
+  border:1px solid #ddd;
+  border-radius:14px;
+  font-size:15px;
+  font-family:inherit;
+  background:#fafafa;
+  transition:0.25s ease;
+}
+
+#contact input:focus,
+#contact textarea:focus{
+  outline:none;
+  border-color:#6c63ff;
+  background:white;
+  box-shadow:0 0 0 4px rgba(108,99,255,0.08);
+}
+
+#contact textarea{
+  min-height:140px;
+  resize:vertical;
+}
+
+#contact .btn{
+  width:fit-content;
+  padding:12px 24px;
+  border-radius:30px;
+  font-size:15px;
+  margin-top:6px;
+  align-self:flex-start;
+  background:#6c63ff;
+  color:white;
+  border:none;
+  cursor:pointer;
+  transition:0.3s ease;
+  box-shadow:0 4px 10px rgba(108,99,255,0.15);
+}
+
+#contact .btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 18px rgba(108,99,255,0.2);
+}
+
+#contact input[type="checkbox"]{
+  width:auto;
+  margin-top:3px;
+  transform:scale(1.05);
+}
+
+/* FLOATING BUTTONS */
+
+.floating{
   position:fixed;
   bottom:20px;
   right:20px;
 }
-.floating a {
+
+.floating a{
   display:block;
   margin-top:10px;
   padding:12px 18px;
   border-radius:30px;
   color:white;
   text-decoration:none;
-  font-weight:bold;
+  font-weight:600;
   box-shadow:0 4px 10px rgba(0,0,0,0.2);
+  transition:0.3s ease;
 }
-.f-email {background:#6c63ff;}
-.f-call {background:#4CAF50;}
-.f-wa {background:#25D366;}
 
-footer {
+.floating a:hover{
+  transform:translateY(-2px);
+}
+
+.f-email{
+  background:#6c63ff;
+}
+
+.f-text{
+  background:#4CAF50;
+}
+
+.f-wa{
+  background:#25D366;
+}
+
+/* FOOTER */
+
+footer{
   text-align:center;
-  padding:20px;
+  padding:30px;
   color:#777;
+  font-size:14px;
 }
 
-@media(max-width:600px){
-  header h1 {font-size:2em;}
+/* ACCESSIBILITY */
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus{
+  outline:3px solid #b8b4ff;
+  outline-offset:2px;
 }
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .intro-profile{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .profile-image img{
+    width:220px;
+  }
+
+  section{
+    padding:25px;
+    margin:20px auto;
+  }
+
+  header h1{
+    font-size:2rem;
+  }
+
+  .floating{
+    bottom:10px;
+    right:10px;
+  }
+
+  .floating a{
+    padding:10px 14px;
+    font-size:14px;
+  }
+
+  #contact .btn{
+    width:100%;
+    text-align:center;
+  }
+
+}
+
 </style>
+
 </head>
 
 <body>
 
 <header>
-  <h1>Online Counselling with Anshu Vashishta</h1>
-  <p>Supporting Anxiety, Trauma & Emotional Wellbeing</p>
-  <p style="margin-top:15px;">Taking the first step can feel difficult — you don’t have to do it alone.</p>
-  <a href="mailto:avcounsellingspace@gmail.com" class="cta-btn">Start Your Free Consultation</a>
+
+<button class="menu-toggle" aria-label="Open menu">☰</button>
+
+<div class="overlay" id="overlay"></div>
+
+<aside class="sidebar" id="sidebar" aria-label="Sidebar menu">
+
+  <div class="sidebar-header">
+
+
+<div class="avatar">AV</div>
+
+<div>
+  <h3>Anshu Vashishta</h3>
+  <p>Counselling & Psychotherapy</p>
+</div>
+
+
+  </div>
+
+  <nav class="sidebar-links" aria-label="Main navigation">
+    <a href="#about">🏡 About</a>
+    <a href="#specialties">🧠 Specialties</a>
+    <a href="#sessions">💬 Sessions</a>
+    <a href="#testimonials">⭐ Testimonials</a>
+    <a href="#contact">📩 Contact</a>
+  </nav>
+
+  <div class="sidebar-footer">
+    Safe • Confidential • Professional
+  </div>
+
+</aside>
+
+<h1>Anshu Vashishta Counselling and Psychotherapy</h1>
+
+<p>
+  Compassionate Online Support for Anxiety,
+  Trauma & Emotional Wellbeing
+</p>
+
+<p>
+  Taking the first step can feel difficult —
+  you don’t have to do it alone.
+</p>
+
+<a href="#contact" class="cta-btn">
+  Start Your Free Consultation
+</a>
+
 </header>
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#specialties">Specialties</a>
-  <a href="#sessions">Sessions</a>
-  <a href="#testimonials">Testimonials</a>
-  <a href="#contact">Contact</a>
-</nav>
+<!-- ABOUT -->
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>Hello, I’m <strong>Anshu Vashishta</strong>, a qualified integrative counsellor with over 3 years of experience. I offer online counselling for young people (16+) and adults.</p>
+<section id="about" class="intro-profile">
 
-  <p>I provide a calm, supportive, and non-judgemental space where you can explore your thoughts and feelings at your own pace. My approach is flexible and tailored to your individual needs, helping you feel heard, understood, and supported.</p>
-
-  <!-- BACP Logo -->
-  <div style="margin-top:20px;">
-    <img src="bacp-logo.png" alt="BACP Registered Member" style="width:120px;">
-    <p style="font-size:0.9em;">Registered BACP Member</p>
+  <div class="profile-image">
+    <img src="me.jpg"
+         alt="Anshu Vashishta counsellor portrait"
+         loading="lazy">
   </div>
+
+  <div class="profile-text">
+
+
+<h2>About Me</h2>
+
+<p>
+  Hello, I’m <strong>Anshu Vashishta</strong>,
+  a qualified integrative counsellor offering
+  compassionate online support for anxiety,
+  trauma, emotional wellbeing, stress,
+  and life challenges.
+</p>
+
+<p>
+  I work with young people (16+) and adults.
+</p>
+
+<p>
+  My approach is flexible and tailored to your
+  individual needs, helping you feel heard,
+  understood, and supported in a calm,
+  non-judgemental space.
+</p>
+
+<div class="profile-badges">
+
+  <div style="text-align:center;">
+
+    <img src="bacp-logo.png"
+         alt="BACP registered member logo"
+         loading="lazy"
+         style="width:120px;">
+
+    <p style="font-size:0.9em;">
+      Registered BACP Member
+    </p>
+
+  </div>
+
+  <div style="text-align:center;">
+
+    <a href="https://www.counselling-directory.org.uk/counsellors/anshu-vashishta"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Visit Counselling Directory profile">
+
+      <img src="https://www.counselling-directory.org.uk/resources/images/banners/small_square.png"
+           width="120"
+           height="120"
+           loading="lazy"
+           alt="Counselling Directory - Find a Counsellor Near You"
+           style="border-radius:14px;">
+
+    </a>
+
+    <p style="font-size:0.9em;">
+      Counselling Directory Profile
+    </p>
+
+  </div>
+
+</div>
+
+
+  </div>
+
 </section>
 
+<!-- SPECIALTIES -->
+
 <section id="specialties">
+
   <h2>How I Can Support You</h2>
+
   <ul>
     <li>Anxiety and overthinking</li>
     <li>Trauma and past experiences</li>
@@ -155,56 +581,216 @@ footer {
     <li>Low self-esteem</li>
     <li>Life challenges and transitions</li>
   </ul>
+
 </section>
+
+<!-- SESSIONS -->
 
 <section id="sessions">
+
   <h2>Online Counselling & Fees</h2>
-  <p>Sessions are held online via secure video call.</p>
-  <p><strong>£50 per 50-minute session</strong></p>
-  <p>Free 20-minute consultation available.</p>
+
+  <p>
+    Sessions are held online via secure video call.
+  </p>
+
+  <p>
+    <strong>£50 per 50-minute session</strong>
+  </p>
+
+  <p>
+    Free 10-minute initial consultation available.
+  </p>
+
+  <p>
+    You can choose either a one-off session
+    for immediate support or ongoing sessions
+    for deeper therapeutic work.
+  </p>
+
 </section>
 
+<!-- TESTIMONIALS -->
+
 <section id="testimonials">
+
   <h2>Client Feedback</h2>
 
   <p style="font-style:italic;">
-    "Anshu created a safe and calming space where I felt truly heard. Her patience helped me manage my anxiety."
+    “Anshu created a safe and calming space where I felt truly heard.
+    Her patience helped me manage my anxiety.”
   </p>
 
   <p style="font-style:italic;">
-    "I felt comfortable opening up at my own pace. The sessions helped me understand my emotions better."
+    “I felt comfortable opening up at my own pace.
+    The sessions helped me understand my emotions better.”
   </p>
 
-  <p style="font-size:0.85em; color:#777;">
+  <p style="font-size:0.85em;color:#777;">
     *Testimonials are anonymised.
   </p>
+
 </section>
 
+<!-- CONFIDENTIALITY -->
 
+<section>
+
+  <h2>Confidentiality</h2>
+
+  <p>
+    Your privacy and confidentiality are respected at all times.
+    All sessions are conducted in a safe, professional,
+    and confidential environment.
+  </p>
+
+</section>
+
+<!-- CRISIS SUPPORT -->
+
+<section>
+
+  <h2>Crisis Support</h2>
+
+  <p>
+    If you are in immediate danger or experiencing
+    a mental health crisis, please contact emergency
+    services or your local crisis support service.
+    This service is not suitable for emergency support.
+  </p>
+
+</section>
+
+<!-- CONTACT -->
 
 <section id="contact">
+
   <h2>Contact Me</h2>
-  <p>Get in touch to start your journey.</p>
 
-  <div class="contact-buttons">
-    <a href="mailto:avcounsellingspace@gmail.com" class="email">Email</a>
-    <a href="tel:07435252267" class="call">Call</a>
-    <a href="https://wa.me/447435252267" target="_blank" class="whatsapp">WhatsApp</a>
-  </div>
+  <p>
+    You are welcome to get in touch with any questions
+    or to arrange an initial consultation.
+  </p>
 
-  <p style="margin-top:15px;">Phone: 07435 252267</p>
+
+  <form action="https://formspree.io/f/xpqnzepb" method="POST">
+
+<input type="hidden"
+       name="_subject"
+       value="New Counselling Enquiry">
+
+<input type="text"
+       name="_gotcha"
+       style="display:none">
+
+<label for="name">Name</label>
+
+<input type="text"
+       id="name"
+       name="name"
+       autocomplete="name"
+       required>
+
+<label for="email">Email</label>
+
+<input type="email"
+       id="email"
+       name="email"
+       autocomplete="email"
+       required>
+
+<label for="message">Message</label>
+
+<textarea id="message"
+          name="message"
+          rows="4"
+          required></textarea>
+
+<label style="font-size:13px;color:#555;display:flex;gap:10px;align-items:flex-start;line-height:1.4;">
+
+  <input type="checkbox"
+         name="consent"
+         required>
+
+  <span>
+    I consent to my data being collected and used
+    to respond to my enquiry in accordance with GDPR.
+  </span>
+
+</label>
+
+<button type="submit" class="btn">
+  Send Message
+</button>
+
+
+  </form>
+
+  <p style="font-size:13px;color:#777;margin-top:14px;">
+    I aim to respond to all enquiries within 24–48 hours.
+  </p>
+
 </section>
 
-<!-- Floating Buttons -->
+<!-- FLOATING BUTTONS -->
+
 <div class="floating">
-  <a href="mailto:avcounsellingspace@gmail.com" class="f-email">Email</a>
-  <a href="tel:07435252267" class="f-call">Call</a>
-  <a href="https://wa.me/447435252267" target="_blank" class="f-wa">WhatsApp</a>
+
+<a href="mailto:avcounsellingspace@gmail.com"
+  class="f-email">
+Email </a>
+
+<a href="https://wa.me/447435252267"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="f-wa">
+WhatsApp </a>
+
 </div>
 
 <footer>
-  © 2026 Anshu Vashishta | Online Counselling
+  © 2026 Anshu Vashishta Counselling and Psychotherapy
 </footer>
+
+<script>
+
+const menuBtn = document.querySelector('.menu-toggle');
+const sidebar = document.getElementById('sidebar');
+const overlay = document.getElementById('overlay');
+
+function openMenu(){
+  sidebar.classList.add('open');
+  overlay.classList.add('active');
+}
+
+function closeMenu(){
+  sidebar.classList.remove('open');
+  overlay.classList.remove('active');
+}
+
+menuBtn.addEventListener('click',(e)=>{
+  e.stopPropagation();
+  openMenu();
+});
+
+overlay.addEventListener('click',closeMenu);
+
+document.addEventListener('click',(e)=>{
+
+  const insideSidebar = sidebar.contains(e.target);
+  const insideButton = menuBtn.contains(e.target);
+
+  if(!insideSidebar && !insideButton){
+    closeMenu();
+  }
+
+});
+
+document.querySelectorAll('.sidebar-links a').forEach(link=>{
+  link.addEventListener('click',closeMenu);
+});
+
+</script>
 
 </body>
 </html>
